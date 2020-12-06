@@ -1,10 +1,10 @@
  class TestCarreras {
   public static void main(String args[]) {
-    Caballo caballo1 = new Caballo("Silver");
+    Caballo caballo1 = new Caballo("Tiro al Blanco");
     caballo1.carrera();
-    Caballo caballo2 = new Caballo("Pinto");
+    Caballo caballo2 = new Caballo("Secretariat");
     caballo2.carrera();
-    Caballo caballo3 = new Caballo("Tornado");
+    Caballo caballo3 = new Caballo("Justify");
     caballo3.carrera();
   }
 }

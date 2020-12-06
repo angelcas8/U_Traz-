@@ -46,7 +46,7 @@ public class HipodromoVisual extends BaseAppGUI{
     			
     			flagImage = !flagImage;
 
-    			theRacecourse.setXY(progress,track, name + " -> " + progress, horseImage);    			
+    			theRacecourse.setXY(progress,track, name + " -> " + progress +" " + "metros", horseImage);    			
       			System.out.println("Horse " + name + " progress -> " + progress);
       			
       			try{
@@ -54,7 +54,7 @@ public class HipodromoVisual extends BaseAppGUI{
 				}catch(InterruptedException e){
 				}
 				      			
-      			if ( progress++ == 350) {
+      			if ( progress++ == 150) {
       				thePrize = theRacecourse.getPrize();
       				theRacecourse.setXY(progress,track, name + "  -> " + thePrize + " place ", winnerImage);
       				System.out.println("Horse " + name + "  -> " + thePrize + " place ");
@@ -151,15 +151,15 @@ public class HipodromoVisual extends BaseAppGUI{
 		MyComponent myComponent;
 		
 		myComponent = new MyComponent();
-		horseImageOne 	= myComponent.getToolkit().getImage("C:/OOPS/resources/images/animals/cat1.gif");
-		horseImageTwo 	= myComponent.getToolkit().getImage("C:/OOPS/resources/images/animals/cat2.gif");
-		winnerImage 	   = myComponent.getToolkit().getImage("C:/OOPS/resources/images/animals/cat3.gif");
+		horseImageOne 	= myComponent.getToolkit().getImage("C:/OOPS/resources/images/animals/horse1.gif");
+		horseImageTwo 	= myComponent.getToolkit().getImage("C:/OOPS/resources/images/animals/horse2.gif");
+                winnerImage 	   = myComponent.getToolkit().getImage("C:/OOPS/resources/images/animals/horsewin.png");
 
 		theRacecourse 	= new Racecourse(4);  //the tracks in the racecourse
-		horse1 			= new Horse("Rayo", 	theRacecourse, 1, horseImageOne, horseImageTwo, winnerImage);
-		horse2 			= new Horse("Fifi", 	theRacecourse, 2, horseImageOne, horseImageTwo, winnerImage);
-		horse3 			= new Horse("Arabela", 	theRacecourse, 3, horseImageOne, horseImageTwo, winnerImage);
-		horse4			= new Horse("Tiro al Blanco", 	theRacecourse, 4, horseImageOne, horseImageTwo, winnerImage);
+		horse1 			= new Horse("Tiro al Blanco", 	theRacecourse, 1, horseImageOne, horseImageTwo, winnerImage);
+		horse2 			= new Horse("Secretariat", 	theRacecourse, 2, horseImageOne, horseImageTwo, winnerImage);
+		horse3 			= new Horse("Justify", 	theRacecourse, 3, horseImageOne, horseImageTwo, winnerImage);
+		horse4			= new Horse("Frankel", 	theRacecourse, 4, horseImageOne, horseImageTwo, winnerImage);
 	}
 
 	public void distributeComponents(){
@@ -185,11 +185,8 @@ public class HipodromoVisual extends BaseAppGUI{
 	public static void main(String [] args){ 
 		HipodromoVisual theAppObject = new HipodromoVisual();
 		theAppObject.startApplication();			
-	}
-	
-	 
+	}	 
 }
-
 
 class BaseAppGUI{
         
